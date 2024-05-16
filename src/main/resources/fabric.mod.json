@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "torchesntrinkets",
 	"version": "${version}",
-	"name": "Torches'n'Trinkets",
+	"name": "Torches 'n' Trinkets",
 	"description": "This mod allows you to wear torches and lanterns on your hip!",
 	"authors": [
 		"bigmanmad"
@@ -32,9 +32,11 @@
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"trinkets": "*",
+		"radiantgear": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"lambdynamiclights": "*"
 	}
 }
