@@ -1,5 +1,7 @@
 package net.bigmanmad.torchesntrinkets;
 
+import net.bigmanmad.torchesntrinkets.item.ModItemGroups;
+import net.bigmanmad.torchesntrinkets.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -8,7 +10,6 @@ import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.RotationAxis;
-import net.minecraft.util.math.Vec3f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,31 +21,31 @@ public class TorchesnTrinkets implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("!?");
+		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
 
 	}
 	public static void beltTorchTrinket(MatrixStack matrices, EntityModel<? extends LivingEntity> model,
-										LivingEntity entity, float headYaw, float headPitch) {
-		RotationAxis Vec3f;
+										LivingEntity entity, float bodyYaw, float bodyPitch) {
 
 		if (entity.isInSwimmingPose() || entity.isFallFlying()) {
+			PlayerEntityModel<AbstractClientPlayerEntity> ctx = (PlayerEntityModel<AbstractClientPlayerEntity>) model;
 			if(model instanceof PlayerEntityModel)
 			{
-				PlayerEntityModel<AbstractClientPlayerEntity> ctx = (PlayerEntityModel<AbstractClientPlayerEntity>) model;
-				matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(ctx.head.roll));
+
+				matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(ctx.body.pivotZ));
 			}
-			matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
-			matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(-45.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(ctx.body.pivotY));
+			matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(ctx.body.pivotX));
 		} else {
 
 			if (entity.isInSneakingPose() && !model.riding) {
 				matrices.translate(0.0F, 0.25F, 0.0F);
 			}
-			matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
-			matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(headPitch));
+			matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(bodyYaw));
+			matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(bodyPitch));
 		}
 		matrices.translate(0.0F, -0.25F, -0.3F);
 	}
-}
-
 }
 
