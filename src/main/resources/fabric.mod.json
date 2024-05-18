@@ -8,8 +8,9 @@
 		"bigmanmad"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/bigmanmad/torchesntrinkets-1.20.1/",
+		"sources": "https://github.com/bigmanmad/torchesntrinkets-1.20.1",
+		"issues": "https://github.com/bigmanmad/torchesntrinkets-1.20.1/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/torchesntrinkets/icon.png",
