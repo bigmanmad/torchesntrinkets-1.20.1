@@ -12,11 +12,10 @@ import net.minecraft.util.Identifier;
 
 
 public class ModItems {
-    public static final Item TorchBelt = registerItem("torchbelt", new Item(new FabricItemSettings()));
+    public static final Item TORCHBELT = registerItem("torch_belt", new Item(new FabricItemSettings()));
+    public static final Item LANTERNBELT = registerItem("lantern_belt", new Item(new FabricItemSettings()));
+    public static final Item SOULLANTERNBELT = registerItem("soul_lantern_belt", new Item(new FabricItemSettings()));
 
-    private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
-        entries.add(TorchBelt);
-    }
 
     private static Item registerItem(String name, Item item) {
         return Registry .register(Registries.ITEM, new Identifier(TorchesnTrinkets.MOD_ID, name), item);
@@ -24,6 +23,5 @@ public class ModItems {
 
     public static void registerModItems () {
         TorchesnTrinkets.LOGGER.info("Registering Mod Items for " + TorchesnTrinkets.MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
     }
 }

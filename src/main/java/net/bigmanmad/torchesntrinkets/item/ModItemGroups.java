@@ -11,10 +11,12 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup TORCHESNTRINKETS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(TorchesnTrinkets.MOD_ID, "torchbelt"),
+            new Identifier(TorchesnTrinkets.MOD_ID, "torch_belt"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.torchesntrinkets"))
-                    .icon(() -> new ItemStack(ModItems.TorchBelt)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.TorchBelt);
+                    .icon(() -> new ItemStack(ModItems.TORCHBELT)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.TORCHBELT);
+                        entries.add(ModItems.LANTERNBELT);
+                        entries.add(ModItems.SOULLANTERNBELT);
 
                     }).build());
     public static void registerItemGroups() {

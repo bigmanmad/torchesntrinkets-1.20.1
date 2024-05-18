@@ -1,5 +1,7 @@
 {
 	"trinkets.slot.legs.torchslot": "Lights",
-	"item.torchesntrinkets.torchbelt": "Torch Belt",
+	"item.torchesntrinkets.torch_belt": "Torch Belt",
+	"item.torchesntrinkets.lantern_belt": "Lantern Belt",
+	"item.torchesntrinkets.soul_lantern_belt": "Soul Lantern Belt",
 	"itemgroup.torchesntrinkets": "Torches 'n' Trinkets"
 }

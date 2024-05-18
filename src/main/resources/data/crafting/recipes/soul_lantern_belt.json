@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " S ",
+    " T "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "minecraft:chain"
+    },
+    "T": {
+      "item": "minecraft:soul_lantern"
+    }
+  },
+  "result": {
+    "item": "torchesntrinkets:soul_lantern_belt",
+    "count": 1
+  }
+}

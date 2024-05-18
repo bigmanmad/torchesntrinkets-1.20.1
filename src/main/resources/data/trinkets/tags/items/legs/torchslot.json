@@ -1,8 +1,8 @@
   {
     "replace": false,
     "values": [
-      "minecraft:torch",
-      "minecraft:lantern",
-      "minecraft:soul_lantern"
+      "torchesntrinkets:torch_belt",
+      "torchesntrinkets:soul_lantern_belt",
+      "torchesntrinkets:lantern_belt"
     ]
   }
