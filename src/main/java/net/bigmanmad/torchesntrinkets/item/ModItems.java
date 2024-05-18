@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 
 
 public class ModItems {
-    public static final Item TORCHBELT = registerItem("torch_belt", new Item(new FabricItemSettings()));
-    public static final Item LANTERNBELT = registerItem("lantern_belt", new Item(new FabricItemSettings()));
-    public static final Item SOULLANTERNBELT = registerItem("soul_lantern_belt", new Item(new FabricItemSettings()));
+    public static final Item TORCHBELT = registerItem("torch_belt", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item LANTERNBELT = registerItem("lantern_belt", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item SOULLANTERNBELT = registerItem("soul_lantern_belt", new Item(new FabricItemSettings().maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {
